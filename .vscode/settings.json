@@ -6,5 +6,6 @@
         "fluttericon",
         "polyline",
         "sqflite"
-    ]
+    ],
+    "cmake.sourceDirectory": "D:/pro/Ecommerce_food_delivery/windows/flutter"
 }
