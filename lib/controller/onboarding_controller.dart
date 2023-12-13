@@ -1,3 +1,4 @@
+import 'package:ecommerce_food_delivery/core/constant/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,16 +13,14 @@ class OnBoardingControllerImp extends OnBoardingController {
   @override
   next() {
     currentPage++;
-    // if (currentPage != 2) {
-
-    //   );
-    // } else {
-    //   Get.offNamed('/home');
-    // }
-    pageController.nextPage(
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.ease,
-    );
+    if (currentPage != 4) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+    } else {
+      Get.offAllNamed(AppRoute.login);
+    }
   }
 
   @override
