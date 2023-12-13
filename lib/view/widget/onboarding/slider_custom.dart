@@ -1,13 +1,19 @@
+import 'package:ecommerce_food_delivery/controller/onboarding_controller.dart';
 import 'package:ecommerce_food_delivery/core/constant/color.dart';
 import 'package:ecommerce_food_delivery/data/dataSource/static/static.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CustomSliderOnBoarding extends StatelessWidget {
+class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
   const CustomSliderOnBoarding({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
+      controller: controller.pageController,
+      onPageChanged: (value) {
+        controller.onPageChanged(value);
+      },
       itemCount: onBoardingList.length,
       itemBuilder: (context, index) {
         return Column(
