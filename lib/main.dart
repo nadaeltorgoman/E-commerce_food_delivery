@@ -1,3 +1,4 @@
+import 'package:ecommerce_food_delivery/core/constant/color.dart';
 import 'package:ecommerce_food_delivery/routes.dart';
 import 'package:ecommerce_food_delivery/view/screen/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -10,14 +11,26 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        fontFamily: 'PlayfairDisplay',
+        primarySwatch: Colors.blue,
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+                color: AppColor.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20),
+          bodyLarge: TextStyle(
+                  height: 2,
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: AppColor.grey,
+                ),      
+        )
       ),
       routes: routes,
       home: const Onboarding(),

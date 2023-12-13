@@ -21,7 +21,7 @@ class CustomDotControllerOnBoarding extends StatelessWidget {
                 width: controller.currentPage == index ? 20 : 5,
                 height: 5,
                 decoration: BoxDecoration(
-                  color: AppColor.primaryColor,
+                  color: controller.currentPage == index ? AppColor.primaryColor : AppColor.grey,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 duration: const Duration(milliseconds: 300),

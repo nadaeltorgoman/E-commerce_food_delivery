@@ -32,7 +32,6 @@ class OnBoardingControllerImp extends OnBoardingController {
   @override
   void onInit() {
     pageController = PageController();
-    // TODO: implement onInit
     super.onInit();
   }
 }

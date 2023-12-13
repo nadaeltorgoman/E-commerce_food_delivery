@@ -1,5 +1,4 @@
 import 'package:ecommerce_food_delivery/controller/onboarding_controller.dart';
-import 'package:ecommerce_food_delivery/core/constant/color.dart';
 import 'package:ecommerce_food_delivery/data/dataSource/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,10 +19,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
           children: [
             Text(
               onBoardingList[index].title!,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+              style: Theme.of(context).textTheme.displayLarge,
             ),
             const SizedBox(
               height: 80,
@@ -43,12 +39,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
               child: Text(
                 onBoardingList[index].body!,
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  height: 2,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: AppColor.grey,
-                ),
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),
           ],
